@@ -11,6 +11,7 @@ Requires:	python
 Requires:	vnstat
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
+BuildRequires:	libiw-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
