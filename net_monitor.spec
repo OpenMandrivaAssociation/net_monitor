@@ -40,5 +40,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS COPYING README NEWS TODO
 %_bindir/%{name}
-%{py_puresitedir}/%{name}-%{version}-py*
-%{py_puresitedir}/%{name}
+%{py_platsitedir}/%{name}-%{version}-py*
+%{py_platsitedir}/%{name}
