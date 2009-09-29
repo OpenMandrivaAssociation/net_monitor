@@ -1,5 +1,5 @@
 Name:		net_monitor
-Version:	0.01
+Version:	0.02
 Release:	%mkrel 1
 Summary:	Network monitoring tool
 License:	GPLv2
@@ -36,4 +36,6 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS COPYING README NEWS TODO
-%_bindir/net_monitor
+%_bindir/%{name}
+%{py_puresitedir}/%{name}-%{version}-py*
+%{py_puresitedir}/%{name}
