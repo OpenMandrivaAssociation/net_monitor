@@ -9,6 +9,8 @@ Source0:	%{name}-%{version}.tar.bz2
 Requires:	pygtk2.0
 Requires:	python
 Requires:	vnstat
+BuildRequires:	python-devel
+BuildRequires:	python-setuptools
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
