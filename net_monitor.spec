@@ -1,5 +1,5 @@
 Name:		net_monitor
-Version:	0.02
+Version:	0.03
 Release:	%mkrel 1
 Summary:	Network monitoring tool
 License:	GPLv2
