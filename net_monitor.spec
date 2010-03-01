@@ -1,5 +1,5 @@
 Name:		net_monitor
-Version:	0.06
+Version:	0.07
 Release:	%mkrel 1
 Summary:	Network monitoring tool
 License:	GPLv2
@@ -28,8 +28,9 @@ make all
 
 %install
 rm -rf %{buildroot}
-
 make install
+mkdir -p %{buildroot}%{_logdir}
+touch %{buildroot}%{_logdir}/%{name}.log
 
 %find_lang %name
 
@@ -40,5 +41,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS COPYING README NEWS TODO
 %_bindir/%{name}
+%{_sysconfdir}/sysconfig/network-scripts/if*.d/netmonitor*
 %{py_platsitedir}/%{name}-%{version}-py*
 %{py_platsitedir}/%{name}
+%ghost %{_logdir}/%{name}.log
