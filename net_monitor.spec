@@ -1,7 +1,7 @@
 Summary:	Network monitoring tool
 Name:		net_monitor
 Version:	0.11
-Release:	10
+Release:	11
 License:	GPLv2
 Group:		Monitoring
 Url:		http://git.mandriva.com/?p=projects/net_monitor.git
