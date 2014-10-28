@@ -6,11 +6,11 @@ License:	GPLv2
 Group:		Monitoring
 Url:		http://git.mandriva.com/?p=projects/net_monitor.git
 Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	python-setuptools
+BuildRequires:	python2-setuptools
 BuildRequires:	libiw-devel
 BuildRequires:	pkgconfig(python)
 Requires:	pygtk2.0
-Requires:	python
+Requires:	python2
 Requires:	vnstat
 
 %description
@@ -21,6 +21,7 @@ detailed logging and network traffic statistics with help of vnstat reporting.
 
 %prep
 %setup -q
+sed -i 's|python setup.py|%__python2 setup.py|' Makefile
 
 %build
 make all
@@ -34,7 +35,7 @@ touch %{buildroot}%{_logdir}/%{name}.log
 %doc AUTHORS COPYING README NEWS TODO
 %{_bindir}/%{name}
 %{_sysconfdir}/sysconfig/network-scripts/if*.d/netmonitor*
-%{py_platsitedir}/%{name}-%{version}-py*
-%{py_platsitedir}/%{name}
+%{py2_platsitedir}/%{name}-%{version}-py*
+%{py2_platsitedir}/%{name}
 %ghost %{_logdir}/%{name}.log
 
