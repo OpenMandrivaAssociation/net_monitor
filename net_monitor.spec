@@ -1,17 +1,18 @@
 Summary:	Network monitoring tool
 Name:		net_monitor
-Version:	0.11
-Release:	15
+Version:	0.22
+Release:	1
 License:	GPLv2
 Group:		Monitoring
-Url:		http://git.mandriva.com/?p=projects/net_monitor.git
-Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	python2-setuptools
+Url:		http://gitweb.mageia.org/software/net_monitor
+Source0:	%{name}-%{version}.tar.xz
+BuildRequires:	python-setuptools
 BuildRequires:	libiw-devel
 BuildRequires:	pkgconfig(python)
-Requires:	pygtk2.0
-Requires:	python2
+Requires:	python
 Requires:	vnstat
+Requires:	typelib(Gdk) == 3.0
+Requires:	typelib(Gtk) == 3.0
 
 %description
 This is a network monitoring tool for Mandriva Linux, intended to replace the
@@ -21,7 +22,6 @@ detailed logging and network traffic statistics with help of vnstat reporting.
 
 %prep
 %setup -q
-sed -i 's|python setup.py|%__python2 setup.py|' Makefile
 
 %build
 make all
@@ -31,11 +31,13 @@ make install
 mkdir -p %{buildroot}%{_logdir}
 touch %{buildroot}%{_logdir}/%{name}.log
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
 %doc AUTHORS COPYING README NEWS TODO
 %{_bindir}/%{name}
 %{_sysconfdir}/sysconfig/network-scripts/if*.d/netmonitor*
-%{py2_platsitedir}/%{name}-%{version}-py*
-%{py2_platsitedir}/%{name}
+%{py_platsitedir}/%{name}-%{version}-py*
+%{py_platsitedir}/%{name}
 %ghost %{_logdir}/%{name}.log
 

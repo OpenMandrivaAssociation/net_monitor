@@ -1,2 +1,4 @@
+removed_sources:
+  net_monitor-0.11.tar.bz2: 36646cd5269a7a213aedc0fc53ad7596bdb1931e
 sources:
-  "net_monitor-0.11.tar.bz2": 36646cd5269a7a213aedc0fc53ad7596bdb1931e
+  net_monitor-0.22.tar.xz: 8a5a299e02d9dc4a6cb61692c2a0ff9cb8530d4e
