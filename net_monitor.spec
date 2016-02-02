@@ -8,7 +8,7 @@ Url:		http://gitweb.mageia.org/software/net_monitor
 Source0:	%{name}-%{version}.tar.xz
 BuildRequires:	python-setuptools
 BuildRequires:	libiw-devel
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 Requires:	python
 Requires:	vnstat
 Requires:	typelib(Gdk) == 3.0
