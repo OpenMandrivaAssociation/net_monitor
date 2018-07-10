@@ -1,7 +1,7 @@
 Summary:	Network monitoring tool
 Name:		net_monitor
 Version:	0.22
-Release:	1
+Release:	2
 License:	GPLv2
 Group:		Monitoring
 Url:		http://gitweb.mageia.org/software/net_monitor
