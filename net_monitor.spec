@@ -4,7 +4,7 @@ Version:	0.22
 Release:	2
 License:	GPLv2
 Group:		Monitoring
-Url:		http://gitweb.mageia.org/software/net_monitor
+Url:		https://gitweb.mageia.org/software/net_monitor
 Source0:	%{name}-%{version}.tar.xz
 BuildRequires:	python-setuptools
 BuildRequires:	libiw-devel
